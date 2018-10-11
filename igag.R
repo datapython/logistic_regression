@@ -25,14 +25,11 @@ fit_logistic <- function(fileName){
   
   betas <- as.data.frame(betas)
   colnames(betas) <- c('variable', 'beta', 'pvalue')
-  
   write.csv(betas, paste0(file_path_sans_ext(fileName), "_betas.csv"))
- 
   
   # model selection
   betas <- betas %>% mutate(variable = as.character(variable), beta = as.numeric(as.character(beta)), 
                   pvalue = as.numeric(as.character(pvalue)))
-  
   
   betas_selected <- betas[betas$pvalue < 0.05,]
   dat2 <- dat1[, c('ID', 'Group', betas_selected$variable)]
@@ -66,7 +63,6 @@ fit_logistic <- function(fileName){
     drop_ind <-  which.min(AICs)
     d1 <- d1[, -(drop_ind + 1)]
     xnames <- xnames[-drop_ind]
-    
   }
   write.csv(model_select, paste0(file_path_sans_ext(fileName), "_model_selection.csv"))
 }
