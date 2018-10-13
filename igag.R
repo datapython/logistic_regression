@@ -115,20 +115,16 @@ join_selected <- function(fileName1, fileName2){
   return (dat4)
 }
 
-write.csv(join_selected("Training_IgA.csv", "Training_IgG.csv"), "IgAG_combined.csv")
+write.csv(join_selected("file1.csv", "file2.csv"), "your_combined.csv")
 
 
 
 ############################    
-fileName = "Training_IgA.csv"
+fileName = "your file.csv"
 fit_logistic(fileName)
 
 ############################
-fileName = "Training_IgG.csv"
-fit_logistic(fileName)
-
-############################
-fileName = "IgAG_combined.csv"
+fileName = "your_combined.csv"
 fit_logistic(fileName)
 
 
