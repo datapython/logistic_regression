@@ -2,7 +2,7 @@
 
 # Below are the two functions, one is for model fitting: fit_logistic. And another is called join_selected: to combine the selected datasets.
 # The fit_logistic generates two files: One file is the list pvalues as well as beta from single variable logistic fitting "filename_betas.csv", another is the list of variables from the multivariate logistic fitting cysles with "filename_model_selection.csv". 
-# join_selected generates a single combined file called "IgAG_combined.csv".
+# join_selected generates a single combined file called "your_combined.csv".
 
 
 setwd(choose.dir())
